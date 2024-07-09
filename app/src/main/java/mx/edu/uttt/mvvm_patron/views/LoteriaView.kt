@@ -50,6 +50,7 @@ fun LotteryNumbers(numbers: List<Int>){
         vertical = 8.dp
     )){
        items(numbers){
+           number ->
            Box(
                contentAlignment = Alignment.Center,
                modifier = Modifier
@@ -57,9 +58,9 @@ fun LotteryNumbers(numbers: List<Int>){
                    .size(48.dp)
                    .background(Color.Red, CircleShape)
            ){
-               Text(text = numbers.toString(),
+               Text(text = number.toString(),
                color=Color.White,
-               fontSize = 24.sp)
+               fontSize = 35.sp)
            }
        }
     }
